@@ -1709,8 +1709,7 @@ p.greeting_comment3 {
     right: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(239, 131, 42, 0.9);
-    padding-top: 20px;
+    background: #FFDDBA;
     z-index: 15;
   }
 
@@ -1727,7 +1726,7 @@ p.greeting_comment3 {
 
   .mobile-nav a {
     text-decoration: none;
-    color: #fff;
+    color: #B15237;
     font-size: 18px;
   }
 
@@ -1745,5 +1744,34 @@ p.greeting_comment3 {
 
   .menu_icon.open .linec {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .ceterline {
+    height: 30px;
+  }
+
+  .huto {
+    font-weight: bold;
+  }
+
+  .official-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #B15237;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 60px auto 0;
+  }
+
+  .social-links {
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .social-link {
+    justify-content: center;
+
   }
 }
