@@ -254,6 +254,10 @@ a {
   margin-top: 200px;
 }
 
+.extra-img {
+  display: none;
+}
+
 .label {
   color: #fff;
   font-family: "Noto Sans JP";
@@ -1773,5 +1777,96 @@ p.greeting_comment3 {
   .social-link {
     justify-content: center;
 
+  }
+
+  .held {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section_held {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+  }
+
+  .SNS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .section_SNS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.4);
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .SNS_container {
+    padding: 0;
+  }
+
+  .card {
+    background-image: url(../img/nami.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 70%;
+    height: 810px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #fff;
+    margin-top: 200px;
+  }
+
+  .extra-img {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+  }
+
+  .section-datetime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dates-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-img {
+    display: none;
+  }
+
+  .location-details p {
+    font-size: 20px;
+    margin: 0 -9px;
+  }
+
+  .location-details .buildings {
+    text-align: center;
   }
 }
