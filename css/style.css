@@ -138,11 +138,13 @@ header {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 300px;
+
 }
 
 .kv-content {
@@ -269,7 +271,6 @@ a {
   display: none;
 }
 
-
 .label {
   color: #fff;
   font-family: "Noto Sans JP";
@@ -376,6 +377,12 @@ strong {
   font-weight: 500;
   margin-top: 30px;
   line-height: 1.6;
+}
+.poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 画像とテキストの間隔 */
 }
 
 /* 開催にあたって */
@@ -508,6 +515,7 @@ strong {
   display: flex;
   /* flex-direction: column; */
   align-items: center;
+  margin-top: 100px;
 }
 
 .section_ExhibitionsandStores {
@@ -776,6 +784,7 @@ strong {
   max-width: 1250px;
   margin: 0 auto;
   padding: 50px 100px;
+  margin-top: 100px;
 }
 
 .section_SNS {
@@ -922,6 +931,7 @@ strong {
   width: 80%;
   max-width: 1250px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .guest_content_flex {
@@ -983,6 +993,7 @@ strong {
 .guest_info_text--right {
   text-align: right;
   margin-bottom: 20px;
+  font-size: 32px;
 }
 
 /* 注意書きリスト */
@@ -1084,6 +1095,7 @@ strong {
   max-width: 1250px;
   margin: 0 auto;
   position: relative;
+  margin-top: 50px;
 }
 
 /* 虫眼鏡の装飾 */
@@ -1169,12 +1181,14 @@ strong {
   margin-bottom: 8px;
   padding-left: 0;
   position: relative;
-  /* text-align: center; */
+  text-align: center;
 }
-
+.rules-section.text-center {
+  text-align: center;
+}
 /* ヒント設置場所の段落 */
 .rules-section:last-child p {
-  /* text-align: center; */
+  text-align: center;
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
@@ -1235,8 +1249,8 @@ strong {
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: calc(100% - 285px);
-  margin: 0 0 0 auto;
+  max-width: 1350px;
+  margin: 0 auto;
   padding: 50px 50px 100px 0;
   padding-bottom: 300px;
 }
@@ -1260,7 +1274,7 @@ samp {
 
 footer {
   position: relative;
-  margin-top: -300px;
+  margin-top: -150px;
   /* 上のセクションに重ねる量 */
   background: url(../img/footer.png) no-repeat center bottom;
   background-size: 100% auto;
@@ -1392,7 +1406,7 @@ footer {
 
 div.content {
   width: 1210px;
-  padding: 65px 0;
+  padding: 55px 0;
   margin: 0 auto;
   border-radius: 50px;
   background: rgba(177, 82, 55, 0.7);
@@ -1445,6 +1459,7 @@ p.greeting_comment3 {
 }
 
 /* 制作者紹介ページ */
+/* 制作者紹介ページ */
 
 .creator_title {
   margin: 200px 0;
@@ -1452,11 +1467,11 @@ p.greeting_comment3 {
 }
 
 .creator .creator_top {
-  margin: 54px;
+  margin-top: 54px;
 }
 
 .creator h2 {
-  margin: 0 0 54px 0;
+  margin: 125px 0 54px 0;
   color: #fff;
   text-align: center;
   font-family: "Noto Sans JP";
@@ -1477,20 +1492,38 @@ p.greeting_comment3 {
   padding: 75.58px 50px 75.58px 50px;
   margin: 0 0 60px 0;
   width: 842px;
-  height: 520px;
+  height: 295px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 2px 10px 0 rgba(121, 88, 255, 0.3);
   display: grid;
   grid-template-areas:
-    "creatorimg creatorh3"
-    "creatorimg creatorp";
+    "img title"
+    "img text";
   grid-template-columns: 419px 1fr;
   grid-template-rows: 112px auto;
   align-items: start;
 }
 
-.creator_grid h3 {
+.creatorWeb_grid {
+  padding: 75.58px 50px 75.58px 50px;
+  margin: 0 0 60px 0;
+  width: 842px;
+  height: 355px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px 0 rgba(121, 88, 255, 0.3);
+  display: grid;
+  grid-template-areas:
+    "img title name"
+    "img text text";
+  grid-template-columns: 419px 1fr 1.2fr;
+  grid-template-rows: 200px auto;
+  align-items: start;
+}
+
+.creator_grid h3,
+.creatorWeb_grid h3 {
   margin: 0;
   color: #b15237;
   font-family: "Noto Sans JP";
@@ -1498,11 +1531,28 @@ p.greeting_comment3 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  grid-area: creatorh3;
+  grid-area: title;
 }
 
-.creator_grid img {
-  grid-area: creatorimg;
+.creatorWeb_grid .name {
+  color: #b15237;
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.96px;
+  text-align: left;
+  grid-area: name;
+}
+
+.creator_grid img,
+.creatorWeb_grid img {
+  grid-area: img;
+}
+
+.creatorWeb_grid img {
+  margin-top: 40px;
 }
 
 .creator_grid p {
@@ -1513,9 +1563,22 @@ p.greeting_comment3 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  grid-area: creatorp;
+  grid-area: text;
 }
 
+.creatorWeb_grid .text {
+  color: #b15237;
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  grid-area: text;
+}
+
+br.break {
+  display: none;
+}
 /* おすすめ展示 */
 .creator_title {
   margin-bottom: 30px;
@@ -1837,18 +1900,18 @@ p.greeting_comment3 {
     padding-bottom: 250px;
   }
   /*   フッダー */
-  footer {
+  /* footer {
     min-height: 550px;
   }
   .footer-logo {
-    /* left: 90px; ← 削除 */
+    left: 90px; ← 削除
     position: static;
   }
   .footer-copyright {
-    /* left: 90px; ← 削除 */
+    left: 90px; ← 削除
     position: static;
-    /* padding: 0 40px; を footer-containerに任せる */
-  }
+    padding: 0 40px; を footer-containerに任せる
+  } */
 
   /* .footer-copyright p {
     font-size: 14px;
@@ -1898,16 +1961,17 @@ p.greeting_comment3 {
     padding-bottom: 250px;
   }
   /*   フッダー */
-  footer {
+  /* footer {
+    
     min-height: 500px;
-  }
+  } */
   /* 日本電子ロゴの大きさ */
   /* .footer-logo .main-logo {
     width: 200px;
   } */
-  .footer-container {
-    padding: 0 160px; /* 160px 内側に寄せる */
-  }
+  /* .footer-container {
+    padding: 0 160px; 
+  } */
 
   @media screen and (max-width: 1210px) and (min-width: 900px) {
     /*  ご挨拶と製作者紹介 */
@@ -2038,7 +2102,7 @@ p.greeting_comment3 {
 
   /*   h2のコンテンツをスマホでのサイズに調整 */
   .h2_title {
-    margin: 100px auto 50px;
+    margin-bottom: 50px;
     width: 350px;
     max-width: 400px;
     margin-left: auto;
@@ -2062,6 +2126,9 @@ p.greeting_comment3 {
   /* キャッチフレーズのテキストのサイズ */
   catchphrase-text {
     font-size: 24px;
+  }
+  .nissensai_temp {
+    margin-top: 200px;
   }
 
   .kv {
@@ -2267,7 +2334,7 @@ p.greeting_comment3 {
   .section_held {
     display: flex;
     flex-direction: column;
-    margin: 100px;
+    margin-bottom: 50px;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -2345,7 +2412,9 @@ p.greeting_comment3 {
 
   .SNS {
     width: 85%;
-    margin: 0 auto;
+    /* margin: 0 auto;
+    margin-top: 50px;
+   */
     padding: 30px 20px;
   }
 
@@ -2546,8 +2615,8 @@ p.greeting_comment3 {
   }
 
   .section__precautions-container {
-    max-width: 100%;
-    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -2581,11 +2650,11 @@ p.greeting_comment3 {
 
   /* フッター */
   footer {
-    margin-top: -95px;
+    margin-top: -50px;
     background: url(../img/footer_sp.png) no-repeat center bottom;
     background-size: cover;
-    min-height: auto;
-    padding: 180px 0 40px;
+    /* min-height: auto;
+    padding: 180px 0 40px; */
   }
 
   .footer-container {
@@ -2646,6 +2715,7 @@ p.greeting_comment3 {
   }
 
   /* ご挨拶と製作者紹介 */
+
   div.frame {
     width: 410px;
   }
@@ -2668,6 +2738,31 @@ p.greeting_comment3 {
     width: 480px;
     padding: 45px 0;
     border-radius: 10px;
+  }
+  div.creator_grid,
+  div.creatorWeb_grid {
+    width: 270px;
+    height: 650px;
+    padding: 40px 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.creator_grid img,
+  div.creatorWeb_grid img {
+    max-width: 270px;
+  }
+
+  div.creator_grid p,
+  div.creatorWeb_grid p.text {
+    font-size: 16px;
+  }
+
+  div.creator_grid h3,
+  div.creatorWeb_grid h3,
+  div.creatorWeb_grid p.name {
+    font-size: 18px;
   }
 
   div.frame {
