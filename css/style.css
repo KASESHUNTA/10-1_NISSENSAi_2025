@@ -264,6 +264,12 @@ a {
   margin-top: 200px;
 }
 
+/* スマホの日付非表示 */
+.time-img_sp {
+  display: none;
+}
+
+
 .label {
   color: #fff;
   font-family: "Noto Sans JP";
@@ -1510,6 +1516,7 @@ p.greeting_comment3 {
   grid-area: creatorp;
 }
 
+/* おすすめ展示 */
 .creator_title {
   margin-bottom: 30px;
 }
@@ -1526,6 +1533,7 @@ p.greeting_comment3 {
   flex-direction: column;
   align-items: anchor-center;
   gap: 30px;
+  margin-bottom: 50%;
 }
 
 .chart-container {
@@ -1657,15 +1665,13 @@ p.greeting_comment3 {
   font-size: 1.5em;
   /* 大きめのフォントサイズ */
   font-weight: bold;
-  color: #cc0000;
   /* 目立つ色（例: 赤） */
   margin-bottom: 25px;
 }
 
 /* アコーディオンコンテナの基本設定 */
 #accordion-container {
-  width: 80%;
-  max-width: 600px;
+  width: 75%;
   margin: 20px auto;
   font-family: sans-serif;
   /* デフォルトの色を定義。JavaScriptで上書きされます。 */
@@ -1694,8 +1700,8 @@ p.greeting_comment3 {
 
 /* アコーディオンの中身のコンテンツ */
 .accordion-content {
+  background-color: var(--main-color);
   padding: 0 18px;
-  background-color: #f7f7f7;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
@@ -1706,9 +1712,28 @@ p.greeting_comment3 {
 
 /* 開いている状態のコンテンツ */
 .accordion-content.active {
-  max-height: 500px;
-  /* 任意の最大値 */
-  padding: 15px 18px;
+  /* 複数のカードに対応するため、max-height を十分に大きく設定 */
+  max-height: 1000px;
+  padding: 20px;
+
+  /* Flexboxで中身のカードを横並びにする */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 33px;
+  /* カード間のスペース */
+  justify-content: center;
+  /* カードを中央に寄せる */
+}
+
+/* 2. 個々のカードの幅設定 */
+.accordion-card {
+  /* 2つ並んでも画面に収まるように幅を設定 */
+  width: 100%;
+  /* デフォルトは100% */
+  width: 100%;
+  /* 1枚あたりの最大幅 */
+  box-sizing: border-box;
+  /* その他、カードの見た目に関するスタイル（背景色、影など） */
 }
 
 /* ヘッダーのホバーエフェクト（少し暗く） */
@@ -1723,7 +1748,7 @@ p.greeting_comment3 {
 
 .shop-card h4 {
   color: var(--main-color);
-  /* メインカラーを使用*/
+  /* メインカラーを使用 */
   margin-top: 0;
 }
 
@@ -1740,6 +1765,46 @@ p.greeting_comment3 {
   /* +を45度回転させてXのようにする（-でも可）*/
 }
 
+.accordion-description {
+  color: #b15237;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.accordion-card {
+  width: 30%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 11px;
+  height: 650px;
+}
+
+.accordion-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.accordion-info {
+  padding: 20px;
+}
+
+.badg {
+  background: #b15237;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.shop-name {
+  color: #b15237;
+}
 @media screen and (max-width: 1700px) and (min-width: 1560px) {
   /*   TOPページ */
 
@@ -1961,14 +2026,14 @@ p.greeting_comment3 {
   }
 
   main {
-    width: 100vw; /* ビューポート幅に合わせる */
-    max-width: 100%; /* はみ出しを防ぐ */
+    width: 100vw;
+    max-width: 100%;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     position: relative;
     left: 50%;
-    transform: translateX(-50%); /* 中央揃え */
+    transform: translateX(-50%);
   }
 
   /*   h2のコンテンツをスマホでのサイズに調整 */
@@ -2337,9 +2402,10 @@ p.greeting_comment3 {
     margin-top: 200px;
   }
   /* スマホでの日付画像調整 */
-  .ime-img_sp {
+  .time-img_sp {
     display: block;
-    width: 170px;
+
+    width: 300px;
     margin: 0 auto;
   }
 
@@ -2448,6 +2514,30 @@ p.greeting_comment3 {
   /* スタンプラリー */
   .section_executivecommittee {
     width: 59%;
+  }
+  .decoration-foot-right {
+    position: absolute;
+    top: 41px;
+    right: 14px;
+    width: 149px;
+    height: auto;
+  }
+
+  /* 装飾デザイン */
+  .decoration-magnifying {
+    position: absolute;
+    top: 39px;
+    left: 39px;
+    width: 100px;
+    height: auto;
+  }
+
+  .decoration-foot-left {
+    position: absolute;
+    bottom: 13px;
+    left: 20px;
+    width: 149px;
+    height: auto;
   }
   /* 注意事項 */
   .section__precautions-content {
