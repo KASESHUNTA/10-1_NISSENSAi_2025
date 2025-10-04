@@ -2853,7 +2853,6 @@ br.break {
     margin: 20px auto 0;
   }
 
-
   /* ゲストトークショー */
   .guest_content_box {
     width: 85%;
@@ -3347,7 +3346,7 @@ br.break {
   }
   .label {
     font-size: 32px;
-}
+  }
   .content-grid {
     gap: 6px;
     padding: 3px;
@@ -3357,11 +3356,10 @@ br.break {
   }
   .location-details p {
     font-size: 18px;
-  
-}
-.strong {
-  font-size: 20px
-}
+  }
+  .strong {
+    font-size: 20px;
+  }
 
   /* 展示・出店 */
   .section_ExhibitionsandStores {
@@ -3371,8 +3369,8 @@ br.break {
     width: 90%;
   }
   /* 公式SNS */
-  .SNS{
-    width:83% ;
+  .SNS {
+    width: 83%;
   }
   .SNS_container {
     gap: 16px;
@@ -3380,7 +3378,8 @@ br.break {
 
   /* ゲストトークショー */
   .guest_content_box {
-    width: 83%;}
+    width: 83%;
+  }
 
   /* 実行委員企画 */
   .section_executivecommittee {
