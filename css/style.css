@@ -1574,15 +1574,13 @@ p.greeting_comment3 {
   font-weight: 400;
   line-height: 150%;
   grid-area: text;
+  text-align: left;
 }
 
 br.break {
   display: none;
 }
 /* おすすめ展示 */
-.creator_title {
-  margin-bottom: 30px;
-}
 
 .creator_title img {
   display: block;
@@ -2408,7 +2406,7 @@ br.break {
 
     div.creatorWeb_grid {
       width: 350px;
-      height: 810px;
+      height: 740px;
       padding: 40px 20px;
       gap: 20px;
       display: flex;
@@ -2418,6 +2416,17 @@ br.break {
     .creator_grid img,
     .creatorWeb_grid img {
       width: 350px;
+    }
+
+    .creator_grid img{
+      margin-top: 20px;
+    }
+
+    .creatorWeb_grid img{
+      margin-top: 20px;
+    }
+    .creatorWeb_grid .text{
+      padding: 0;
     }
   }
 }
@@ -3091,10 +3100,9 @@ br.break {
     padding: 30px 0;
     border-radius: 30px;
   }
-  div.creator_grid,
   div.creatorWeb_grid {
     width: 270px;
-    height: 650px;
+    height: 600px;
     padding: 40px 20px;
     gap: 20px;
     display: flex;
@@ -3127,7 +3135,7 @@ br.break {
 
   div.creator_grid {
     width: 270px;
-    height: 650px;
+    height: 470px;
     padding: 40px 20px;
     gap: 20px;
     display: flex;
@@ -3153,6 +3161,22 @@ br.break {
   section.creator h2 {
     margin: 20px 10px 10px 10px;
     font-size: 24px;
+  }
+
+  
+  .creator_grid img{
+      margin-top: 20px;
+  }
+
+  .creatorWeb_grid img{
+      margin-top: 20px;
+  }
+  .creatorWeb_grid .text{
+      padding: 0;
+  }
+
+  p.greeting_comment{
+    font-size: 16px;
   }
 
   /* おすすめ展示診断 */
@@ -3423,12 +3447,16 @@ br.break {
   }
 
   img.greeting_img {
-    width: 164px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .creator_title img {
     width: 330px;
+  }
+
+  p.greeting_comment{
+    font-size: 16px;
   }
 
   section.greeting_content {
@@ -3463,12 +3491,16 @@ br.break {
   }
   
   img.greeting_img {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
   
   .creator_title img {
     width: 330px;
+  }
+
+  p.greeting_comment{
+    font-size: 16px;
   }
   
   section.greeting_content {
@@ -3511,20 +3543,27 @@ br.break {
   footer {
     margin-top: -209px;
   }
+  .footer-logo img{
+    width: 80%;
+  }
     /* ご挨拶と製作者紹介 */
 
   div.frame {
-    width: 310px;
+    width: 90%;
     border-radius: 30px;
   }
 
   img.greeting_img {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
 
   .creator_title img {
-    width: 330px;
+    width: 80%;
+  }
+
+  p.greeting_comment{
+    font-size: 16px;
   }
 
   section.greeting_content {
@@ -3533,26 +3572,26 @@ br.break {
   }
 
   div.content {
-    width: 350px;
+    width: 98%;
     padding: 20px 0;
     border-radius: 30px;
   }
   div.creator_grid{
-    width: 250px;
+    width: 78%;
     height: 420px;
   }
   .creator_grid img{
     margin: 0;
-    width: 250px;
+    width: 100%;
   }
 
   div.creatorWeb_grid{
-    width: 250px;
+    width: 78%;
     height: 540px;
   }
   .creatorWeb_grid img{
     margin: 0;
-    width: 250px;
+    width: 100%;
   }
   .text{
     padding: 0;
