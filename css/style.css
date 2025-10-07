@@ -142,7 +142,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 119vh;
+  /* height: 119vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,17 +159,19 @@ header {
 }
 
 .kv-title {
+  font-family: "M PLUS Rounded 1c", "Rounded Mplus 1c Bold",
+    "Hiragino Maru Gothic ProN", "Arial Rounded MT Bold", sans-serif;
+  font-weight: 700; /* 太字指定 */
   color: #fff;
-
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
+  text-shadow: 6px 6px 15px rgba(0, 0, 0, 1);
 }
 
 .kv-title-number {
   font-size: 96px;
   display: block;
-  font-family: "Noto Sans JP", sans-serif;
+
   font-weight: 400;
   position: relative;
   left: 6%;
@@ -179,14 +181,14 @@ header {
 .kv-title-main {
   font-size: 250px;
   display: block;
-  font-family: "Noto Sans JP", sans-serif;
+
   font-weight: 400;
 }
 
 .kv-title-sub {
   font-size: 64px;
   display: block;
-  font-family: "Noto Sans JP", sans-serif;
+
   font-weight: 400;
 }
 
@@ -651,7 +653,7 @@ strong {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 11px;
-  height: 650px;
+  /* height: 650px; */
 }
 
 .exhibition-card img {
@@ -661,7 +663,7 @@ strong {
 }
 
 .exhibition-info {
-  padding: 20px;
+  padding: 8px;
 }
 
 .location-badges {
@@ -694,6 +696,10 @@ strong {
   margin-bottom: 15px;
 }
 
+.exhibition-description-time {
+  font-weight: bold;
+  font-size: 14px;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -810,12 +816,14 @@ strong {
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-  background: linear-gradient(201deg,
-      #7638fa 0%,
-      #d300c5 25%,
-      #ff0069 50%,
-      #ff7a00 75%,
-      #ffd600 100%);
+  background: linear-gradient(
+    201deg,
+    #7638fa 0%,
+    #d300c5 25%,
+    #ff0069 50%,
+    #ff7a00 75%,
+    #ffd600 100%
+  );
 }
 
 .SNS_container {
@@ -1363,14 +1371,6 @@ footer {
   line-height: 1;
 }
 
-.social-icon {
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0.75em;
-  flex-shrink: 0;
-  vertical-align: middle;
-}
-
 .social-link p {
   margin: 0;
   line-height: 1.5em;
@@ -1601,6 +1601,7 @@ br.break {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  margin-bottom: 200px;
 }
 
 .chart-box {
@@ -1608,20 +1609,20 @@ br.break {
   flex-direction: column;
   align-items: anchor-center;
   gap: 30px;
-  margin-bottom: 50%;
+  margin-bottom: 30%;
 }
 
 .chart-container {
+  width: 50%; /* あるいは max-width: 1000px; など */
+  margin: 0 auto;
   display: flex;
-  height: 300px;
-  padding: 20px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: stretch;
+  height: 300px;
+  padding: 20px 0;
   border-radius: 20px;
   background: #fff;
-  margin: 0 180px 0 180px;
 }
 
 #question {
@@ -1642,7 +1643,7 @@ br.break {
 
 #start-button {
   display: flex;
-  width: 1070px;
+  width: 860px;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -1669,7 +1670,7 @@ br.break {
 
 #yes-button {
   display: flex;
-  width: 530px;
+  width: 350px;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -1688,7 +1689,7 @@ br.break {
 
 #no-button {
   display: flex;
-  width: 530px;
+  width: 350px;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -1882,7 +1883,6 @@ br.break {
 }
 
 @media screen and (max-width: 1831px) {
-
   /* 見出し */
   .h2_title_2 {
     margin-left: 200px;
@@ -1929,7 +1929,6 @@ br.break {
 }
 
 @media screen and (max-width: 1700px) {
-
   /*   TOPページ */
   /*   見出し */
   .h2_title {
@@ -2012,7 +2011,6 @@ br.break {
 }
 
 @media screen and (max-width: 1560px) {
-
   /*   TOPページ */
   /*   見出し */
   .h2_title {
@@ -2128,7 +2126,8 @@ br.break {
   }
 
   /* 注意事項 */
-  .section__precautions-container {}
+  .section__precautions-container {
+  }
 
   /*   フッダー位置調節 */
   .footer-container {
@@ -2136,7 +2135,6 @@ br.break {
   }
 
   @media screen and (max-width: 1450px) {
-
     /* TOPページ */
     .h2_title {
       width: 300px;
@@ -2219,7 +2217,6 @@ br.break {
   }
 
   @media screen and (max-width: 1210px) {
-
     /* TOPページ */
     /* 開催日付 */
     .card {
@@ -2521,7 +2518,6 @@ br.break {
 }
 
 @media screen and (max-width: 600px) {
-
   /*   /* TOPページ * */
   body {
     width: 100%;
@@ -2529,6 +2525,11 @@ br.break {
     /* 横スクロールを防止 */
     margin: 0;
     padding: 0;
+  }
+
+  /* ハンバーガーメニュー */
+  .hamburger-icon {
+    color: #093d8a;
   }
 
   main {
@@ -2571,12 +2572,8 @@ br.break {
     font-size: 24px;
   }
 
-  .nissensai_temp {
-    margin-top: 200px;
-  }
-
   .kv {
-    background-image: url(../img/KV_SP.png);
+    background-image: url(../img/Nissensai_KV_SP.png);
     width: 100%;
     height: 100%;
     aspect-ratio: 9/16;
@@ -2628,7 +2625,7 @@ br.break {
   }
 
   .kv-title-sub {
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 10px;
     font-weight: normal;
   }
@@ -2652,13 +2649,13 @@ br.break {
 
   .menu_icon {
     position: absolute;
-    right: 10px;
-    top: 20px;
+    right: 40px;
+    top: 26px;
     z-index: 20;
   }
 
   .menu_icon-line {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background: #fff;
     margin: 4px 0;
@@ -2672,7 +2669,7 @@ br.break {
     right: 0;
     width: 100%;
     height: 100vh;
-    background: #FFDDBA;
+    background: #ffddba;
     z-index: 15;
   }
 
@@ -2682,13 +2679,13 @@ br.break {
   }
 
   .mobile-nav li {
-    margin: 20px 0;
+    margin: 15px 0;
     text-align: center;
   }
 
   .mobile-nav a {
     text-decoration: none;
-    color: #B15237;
+    color: #b15237;
     font-size: 18px;
   }
 
@@ -2711,14 +2708,13 @@ br.break {
   .huto {
     font-weight: bold;
     margin: 50px;
-
   }
 
   .official-link {
     display: block;
     color: #fff;
     text-decoration: none;
-    border: 1px solid #B15237;
+    border: 1px solid #b15237;
     padding: 10px 15px;
     border-radius: 5px;
     width: fit-content;
@@ -2732,7 +2728,6 @@ br.break {
 
   .social-link {
     justify-content: center;
-
   }
 
   /* 開催にあたって */
@@ -2809,7 +2804,6 @@ br.break {
     display: flex;
     justify-content: center;
     gap: 10px;
-
   }
 
   .held {
@@ -2876,16 +2870,17 @@ br.break {
     flex: 0 0 calc(25% - 5px);
   }
 
+  /* 展示・出店 */
   .content-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 6px;
+    display: block;
+    padding: 15px;
     max-height: 600px;
   }
 
   .exhibition-card {
-    height: auto;
-    padding: 8px;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 11px;
   }
 
   .exhibition-info {
@@ -2893,7 +2888,7 @@ br.break {
   }
 
   .badge {
-    font-size: 12px;
+    font-size: 14px;
     padding: 3px 8px;
   }
 
@@ -3071,7 +3066,7 @@ br.break {
 
   /* 注意事項 */
   .section__precautions-content {
-    padding: 30px 20px;
+    padding: 30px 50px;
     margin-bottom: 50px;
   }
 
@@ -3099,7 +3094,7 @@ br.break {
     line-height: 1.8;
     margin-bottom: 15px;
     padding-left: 1em;
-    text-indent: -1em;
+    /* text-indent: -1em; */
     text-align: left;
   }
 
@@ -3111,7 +3106,7 @@ br.break {
 
   /* フッター */
   footer {
-    margin-top: -50px;
+    margin-top: -90px;
     background: url(../img/footer_sp.png) no-repeat center bottom;
     background-size: cover;
     /* min-height: auto;
@@ -3134,6 +3129,9 @@ br.break {
     margin-bottom: 20px;
   }
 
+  .footer-logo img {
+    width: 65%;
+  }
   .footer-menu ul,
   .footer-info ul {
     text-align: center;
@@ -3178,7 +3176,8 @@ br.break {
   /* ご挨拶と製作者紹介 */
 
   div.frame {
-    width: 410px;
+    width: 380px;
+    border-radius: 30px;
   }
 
   img.greeting_img {
@@ -3188,6 +3187,7 @@ br.break {
 
   .creator_title img {
     width: 330px;
+    margin-bottom: 40px;
   }
 
   section.greeting_content {
@@ -3196,15 +3196,13 @@ br.break {
   }
 
   div.content {
-    width: 480px;
-    padding: 45px 0;
-    border-radius: 10px;
+    width: 430px;
+    padding: 30px 0;
+    border-radius: 30px;
   }
-
-  div.creator_grid,
   div.creatorWeb_grid {
     width: 270px;
-    height: 650px;
+    height: 600px;
     padding: 40px 20px;
     gap: 20px;
     display: flex;
@@ -3237,7 +3235,7 @@ br.break {
 
   div.creator_grid {
     width: 270px;
-    height: 650px;
+    height: 470px;
     padding: 40px 20px;
     gap: 20px;
     display: flex;
@@ -3265,10 +3263,25 @@ br.break {
     font-size: 24px;
   }
 
+  .creator_grid img {
+    margin-top: 20px;
+  }
+
+  .creatorWeb_grid img {
+    margin-top: 20px;
+  }
+  .creatorWeb_grid .text {
+    padding: 0;
+  }
+
+  p.greeting_comment {
+    font-size: 16px;
+  }
+
   /* おすすめ展示診断 */
 
   .chart-box {
-    width: 600px;
+    width: 430px;
     display: flex;
     flex-direction: column;
     align-items: anchor-center;
@@ -3289,72 +3302,21 @@ br.break {
   }
 
   .chart-container {
-    display: flex;
+    margin: 0 auto;
+    width: 350px;
     height: 200px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
-    border-radius: 20px;
-    background: #fff;
-    margin: 0 60px 0;
   }
 
   #start-button {
-    display: flex;
-    width: 490px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: #ef832a;
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
+    width: 340px;
   }
 
   #yes-button {
-    display: flex;
-    width: 230px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: #dd6541;
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
+    width: 140px;
   }
 
   #no-button {
-    display: flex;
-    width: 230px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: #4484be;
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
+    width: 140px;
   }
 
   .shop-name {
@@ -3411,7 +3373,7 @@ br.break {
 
   #restart-button {
     display: flex;
-    width: 480px;
+    width: 340px;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -3450,7 +3412,6 @@ br.break {
     flex-direction: column;
   }
 
-
   .accordion-card img {
     width: 100%;
     grid-area: p1;
@@ -3462,11 +3423,11 @@ br.break {
 
   .accordion-info {
     display: grid;
-    grid-template-areas: "p2 p1"
+    grid-template-areas:
+      "p2 p1"
       "p5 p1"
       "p3 p3";
     gap: 10px;
-
   }
 
   .shop-name {
@@ -3486,9 +3447,32 @@ br.break {
   }
 }
 
-/* iPhone 14 Pro Max */
-@media screen and (max-width: 431px) {
+/* iPhone16Pro Max */
 
+@media screen and (max-width: 440px) {
+  /* 実行委員会企画 */
+  .section_executivecommittee {
+    width: 85%;
+    padding: 60px 20px;
+  }
+
+  .decoration-foot-right {
+    width: 90px;
+  }
+  .decoration-foot-left {
+    width: 90px;
+  }
+  .decoration-magnifying {
+    width: 73px;
+  }
+  /* フッダー */
+  footer {
+    margin-top: -190px;
+  }
+}
+
+/* iPhone 14 Pro Max */
+@media screen and (max-width: 430px) {
   .text {
     font-size: 20px;
   }
@@ -3562,26 +3546,56 @@ br.break {
   }
 
   .decoration-magnifying {
-    top: 31px;
-    left: 30px;
-    width: 75px;
+    top: 25px;
+    left: 20px;
+    width: 54px;
   }
 
   .decoration-foot-right {
-    top: 29px;
+    top: 16px;
 
-    width: 93px;
+    width: 80px;
   }
 
   .decoration-foot-left {
     bottom: 20px;
 
-    width: 93px;
+    width: 80px;
+  }
+  /* ご挨拶と製作者紹介 */
+
+  div.frame {
+    width: 380px;
+    border-radius: 30px;
+  }
+
+  img.greeting_img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .creator_title img {
+    width: 330px;
+  }
+
+  p.greeting_comment {
+    font-size: 16px;
+  }
+
+  section.greeting_content {
+    margin: 0 20px;
+    padding-top: 20px;
+  }
+
+  div.content {
+    width: 414px;
+    padding: 22px 0;
+    border-radius: 30px;
   }
 
   /*   フッダー */
   footer {
-    margin-top: -127px;
+    margin-top: -190px;
   }
 
   /* おすすめ展示診断 */
@@ -3764,7 +3778,6 @@ br.break {
     flex-direction: column;
   }
 
-
   .accordion-card img {
     width: 100%;
     grid-area: p1;
@@ -3776,11 +3789,11 @@ br.break {
 
   .accordion-info {
     display: grid;
-    grid-template-areas: "p2 p1"
+    grid-template-areas:
+      "p2 p1"
       "p5 p1"
       "p3 p3";
     gap: 10px;
-
   }
 
   .shop-name {
@@ -3802,8 +3815,24 @@ br.break {
 
 /* iPhone XR */
 @media screen and (max-width: 415px) {
+  /* KV */
+  .kv-title-main {
+    font-size: 58px;
+  }
+  .kv-title-number {
+    font-size: 38px;
+  }
+  .kv-title-sub {
+    font-size: 27px;
+  }
+
   .building-tab {
     padding: 10px 14px;
+  }
+
+  /* フッター */
+  footer {
+    margin-top: -210px;
   }
 
   /* おすすめ展示診断 */
@@ -3985,7 +4014,6 @@ br.break {
     flex-direction: column;
   }
 
-
   .accordion-card img {
     width: 100%;
     grid-area: p1;
@@ -3997,11 +4025,11 @@ br.break {
 
   .accordion-info {
     display: grid;
-    grid-template-areas: "p2 p1"
+    grid-template-areas:
+      "p2 p1"
       "p5 p1"
       "p3 p3";
     gap: 10px;
-
   }
 
   .shop-name {
@@ -4023,6 +4051,11 @@ br.break {
 
 /* iPhone 12 Pro */
 @media screen and (max-width: 390px) {
+  /* KV */
+
+  .kv-title-sub {
+    font-size: 23px;
+  }
 
   /* 展示・出店 */
   .map-container {
@@ -4034,7 +4067,6 @@ br.break {
     padding: 10px 10px;
     flex: 0 0 calc(25% - 5px);
   }
-
   .badge {
     padding: 3px 6px;
   }
@@ -4043,24 +4075,66 @@ br.break {
   .SNS_container {
     padding: 10px;
   }
-
   /* フッダー */
   footer {
     margin-top: -209px;
   }
 
-  .mobile-nav a {
-    text-decoration: none;
-    color: #B15237;
-    font-size: 15px;
+  /* ご挨拶と製作者紹介 */
+
+  div.frame {
+    width: 90%;
+    border-radius: 30px;
   }
 
-  .huto {
-    margin: 20px 0;
+  img.greeting_img {
+    width: 120px;
+    height: 120px;
   }
 
-  .map-menu ul li {
-    margin: 7px;
+  .creator_title img {
+    width: 80%;
+  }
 
+  p.greeting_comment {
+    font-size: 16px;
+  }
+
+  section.greeting_content {
+    margin: 0 20px;
+    padding-top: 20px;
+  }
+
+  div.content {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 30px;
+  }
+  div.creator_grid {
+    width: 78%;
+    height: 420px;
+  }
+  .creator_grid img {
+    margin: 0;
+    width: 100%;
+  }
+
+  div.creatorWeb_grid {
+    width: 78%;
+    height: 540px;
+  }
+  .creatorWeb_grid img {
+    margin: 0;
+    width: 100%;
+  }
+  .text {
+    padding: 0;
+  }
+}
+
+/* iPhoneSE */
+@media screen and (max-width: 375px) {
+  .card {
+    width: 62%;
   }
 }
