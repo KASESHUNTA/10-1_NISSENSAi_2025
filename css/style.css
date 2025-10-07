@@ -1581,7 +1581,11 @@ br.break {
   display: none;
 }
 /* おすすめ展示 */
+.excreator_title {
+  margin: 200px 0 30px 0;
+}
 
+.excreator_title img,
 .creator_title img {
   display: block;
   max-width: 100%;
