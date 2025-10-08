@@ -519,6 +519,74 @@ strong {
   object-fit: contain;
 }
 
+/* おすすめ展示診断 */
+.recomend_content_box {
+  display: flex;
+  height: auto;
+  padding: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: -10px 10px 20px 0 rgba(0, 0, 0, 0.4);
+  width: 80%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  margin-top: 50px;
+}
+.recomend_text {
+  color: #b15237;
+  text-align: center;
+}
+.button_container_diagnosis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  background: #08a908;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.button_container_diagnosis:hover {
+  background-color: #ffffff;
+  border: 3px solid #08a908;
+  color: #08a908;
+}
+.button_icon_diagnosis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: #08a908;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 32px;
+  height: 32px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.button_container_diagnosis:hover .button_icon_diagnosis {
+  background-color: #ffffff;
+  border: 2px solid #08a908;
+  color: #08a908;
+}
+
 /* 展示・出店 */
 .ExhibitionsandStores {
   display: flex;
@@ -1304,6 +1372,10 @@ footer {
   z-index: 1;
   /* 重なり順を制御 */
 }
+/* スマホ用のSNSロゴを非表示 */
+.footer_SP_SNS {
+  display: none;
+}
 
 .footer-container {
   display: flex;
@@ -1882,10 +1954,32 @@ br.break {
   color: #b15237;
 }
 
+/* クリック可能な結果のスタイル */
+.clickable-result {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: #b15237;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-emphasis: none;
+  font-size: 62px;
+}
+
+.clickable-result:hover {
+  color: #ef832a;
+  text-decoration-color: #ef832a;
+  transform: scale(1.05);
+}
+
 @media screen and (max-width: 1831px) {
   /* 見出し */
   .h2_title_2 {
     margin-left: 200px;
+  }
+  /* おすすめ展示紹介 */
+  .recomend_content_box {
+    width: 64%;
   }
 
   /* 展示・出店 */
@@ -1939,6 +2033,10 @@ br.break {
     width: 350px;
   }
 
+  /* おすすめ展示紹介 */
+  .recomend_content_box {
+    width: 61%;
+  }
   /* 展示・出店 */
   .section_ExhibitionsandStores {
     width: 67%;
@@ -2019,6 +2117,10 @@ br.break {
 
   .h2_title_2 {
     width: 320px;
+  }
+  /* おすすめ展示紹介 */
+  .recomend_content_box {
+    width: 57%;
   }
 
   /* 開催日付 */
@@ -2139,6 +2241,11 @@ br.break {
     .h2_title {
       width: 300px;
     }
+    /* おすすめ展示紹介 */
+    .recomend_content_box {
+      width: 54%;
+    }
+  
 
     a {
       font-size: 16px;
@@ -2228,6 +2335,10 @@ br.break {
       gap: 6px;
     }
 
+     /* おすすめ展示紹介 */
+     .recomend_content_box {
+      width: 47%;
+    }
     /* 開催にあたって */
     .section_held {
       gap: 6px;
@@ -2254,7 +2365,10 @@ br.break {
       height: 28px;
       font-size: 1.2rem;
     }
-
+   /* おすすめ展示紹介 */
+   .recomend_content_box {
+    width: 47%;
+  }
     /* 展示・出店 */
     .section_ExhibitionsandStores {
       width: 54%;
@@ -2745,6 +2859,23 @@ br.break {
     color: #fff;
     margin-top: 200px;
   }
+  
+  /* おすすめ展示紹介 */
+  .recomend_section_area{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .recomend_content_box {
+    width: 85%;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+  .department-illustration{
+    width: 306px;
+    height: auto;
+  }
+
 
   /* スマホでの日付画像調整 */
   .time-img_sp {
@@ -3112,6 +3243,17 @@ br.break {
     /* min-height: auto;
     padding: 180px 0 40px; */
   }
+  /* スマホ用のSNSロゴを表示 */
+  .footer_SP_SNS {
+    display: block;
+    text-align: center;
+  }
+  .footer_PC_jec {
+    display: none;
+  }
+  .footer_SP_SNS_img {
+    margin-top: 20px;
+  }
 
   .footer-container {
     flex-direction: column;
@@ -3300,6 +3442,9 @@ br.break {
     margin-top: 10px;
     margin-bottom: 0px;
   }
+  .clickable-result {
+    font-size: 32px;
+  }
 
   .chart-container {
     margin: 0 auto;
@@ -3456,6 +3601,15 @@ br.break {
     padding: 60px 20px;
   }
 
+  /* ハンバーガーメニュー */
+  .mobile-nav li {
+    margin: 13px 0;
+    text-align: center;
+}
+  .official-link{
+    margin: 0 auto;
+  }
+
   .decoration-foot-right {
     width: 90px;
   }
@@ -3467,7 +3621,7 @@ br.break {
   }
   /* フッダー */
   footer {
-    margin-top: -190px;
+    margin-top: -225px;
   }
 }
 
@@ -3505,6 +3659,10 @@ br.break {
 
   /* 展示・出店 */
   .section_ExhibitionsandStores {
+    width: 83%;
+  }
+  /* おすすめ展示紹介 */
+  .recomend_content_box {
     width: 83%;
   }
 
@@ -3595,7 +3753,7 @@ br.break {
 
   /*   フッダー */
   footer {
-    margin-top: -190px;
+    margin-top: -222px;
   }
 
   /* おすすめ展示診断 */
@@ -3832,7 +3990,7 @@ br.break {
 
   /* フッター */
   footer {
-    margin-top: -210px;
+    margin-top: -222px;
   }
 
   /* おすすめ展示診断 */
@@ -4047,6 +4205,13 @@ br.break {
   .location-badges {
     height: auto;
   }
+
+  /* スマートフォン用のクリック可能な結果のスタイル */
+  .clickable-result {
+    font-size: 24px;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+  }
 }
 
 /* iPhone 12 Pro */
@@ -4077,7 +4242,7 @@ br.break {
   }
   /* フッダー */
   footer {
-    margin-top: -209px;
+    margin-top: -223px;
   }
 
   /* ご挨拶と製作者紹介 */
@@ -4136,5 +4301,22 @@ br.break {
 @media screen and (max-width: 375px) {
   .card {
     width: 62%;
+  }
+    /* おすすめ展示紹介 */
+  .department-illustration{
+    width: 260px;
+    height: auto;
+  }
+
+  /* ハンバーガーメニュー */
+
+  .official-link {
+    margin-top: 10px;
+  }
+  .huto {
+    margin: 30px;
+  }
+  .mobile-nav li {
+    margin: 7px 0;
   }
 }
