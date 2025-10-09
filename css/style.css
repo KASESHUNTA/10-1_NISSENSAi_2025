@@ -142,14 +142,14 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  /* height: 119vh; */
+  height: 96vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 30px;
   margin-top: 72px;
-  aspect-ratio: 1280/854;
+  aspect-ratio: 1920/1080;
 }
 
 .kv-content {
@@ -163,13 +163,15 @@ header {
     "Hiragino Maru Gothic ProN", "Arial Rounded MT Bold", sans-serif;
   font-weight: 700; /* 太字指定 */
   color: #fff;
-  line-height: 1.2;
-  margin: 0;
+  line-height: 1.1;
   text-shadow: 6px 6px 15px rgba(0, 0, 0, 1);
+  position: relative;
+  /* top: -95px; */
+  transform: translateY(-15%);
 }
 
 .kv-title-number {
-  font-size: 96px;
+  font-size: 82px;
   display: block;
 
   font-weight: 400;
@@ -179,14 +181,14 @@ header {
 }
 
 .kv-title-main {
-  font-size: 250px;
+  font-size: 212px;
   display: block;
 
   font-weight: 400;
 }
 
 .kv-title-sub {
-  font-size: 64px;
+  font-size: 52px;
   display: block;
 
   font-weight: 400;
@@ -535,11 +537,12 @@ strong {
   max-width: 1250px;
   margin: 0 auto;
   padding: 50px 100px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .recomend_text {
   color: #b15237;
   text-align: center;
+  font-size: 20px;
 }
 .button_container_diagnosis {
   display: flex;
@@ -928,6 +931,27 @@ strong {
   border-radius: 35px;
   border: 3px solid #b15237;
   background: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.button_container_SNS:hover {
+  border-radius: 50px;
+
+  background: linear-gradient(
+    270deg,
+    rgba(211, 0, 197, 0.8) -8.86%,
+    rgba(255, 0, 105, 0.8) 49.08%,
+    rgba(255, 122, 0, 0.8) 107.03%
+  );
+}
+
+.button_container_SNS:hover .button_SNS {
+  color: #fff;
+}
+
+.button_container_SNS:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .button_SNS {
@@ -1309,7 +1333,7 @@ strong {
 }
 
 .rules-section:last-child li::before {
-  content: "•";
+
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1681,7 +1705,7 @@ br.break {
   flex-direction: column;
   align-items: anchor-center;
   gap: 30px;
-  margin-bottom: 30%;
+  margin-bottom: 40%;
 }
 
 .chart-container {
@@ -2245,7 +2269,6 @@ br.break {
     .recomend_content_box {
       width: 54%;
     }
-  
 
     a {
       font-size: 16px;
@@ -2335,8 +2358,8 @@ br.break {
       gap: 6px;
     }
 
-     /* おすすめ展示紹介 */
-     .recomend_content_box {
+    /* おすすめ展示紹介 */
+    .recomend_content_box {
       width: 47%;
     }
     /* 開催にあたって */
@@ -2365,10 +2388,10 @@ br.break {
       height: 28px;
       font-size: 1.2rem;
     }
-   /* おすすめ展示紹介 */
-   .recomend_content_box {
-    width: 47%;
-  }
+    /* おすすめ展示紹介 */
+    .recomend_content_box {
+      width: 47%;
+    }
     /* 展示・出店 */
     .section_ExhibitionsandStores {
       width: 54%;
@@ -2859,9 +2882,9 @@ br.break {
     color: #fff;
     margin-top: 200px;
   }
-  
+
   /* おすすめ展示紹介 */
-  .recomend_section_area{
+  .recomend_section_area {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -2871,11 +2894,10 @@ br.break {
     padding: 30px 20px;
     margin: 0 auto;
   }
-  .department-illustration{
+  .department-illustration {
     width: 306px;
     height: auto;
   }
-
 
   /* スマホでの日付画像調整 */
   .time-img_sp {
@@ -3166,6 +3188,8 @@ br.break {
   }
 
   /* スタンプラリー */
+
+ 
   .section_executivecommittee {
     width: 59%;
   }
@@ -3605,8 +3629,8 @@ br.break {
   .mobile-nav li {
     margin: 13px 0;
     text-align: center;
-}
-  .official-link{
+  }
+  .official-link {
     margin: 0 auto;
   }
 
@@ -4302,8 +4326,8 @@ br.break {
   .card {
     width: 62%;
   }
-    /* おすすめ展示紹介 */
-  .department-illustration{
+  /* おすすめ展示紹介 */
+  .department-illustration {
     width: 260px;
     height: auto;
   }
